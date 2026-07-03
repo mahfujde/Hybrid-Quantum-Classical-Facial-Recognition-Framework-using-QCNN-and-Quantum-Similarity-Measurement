@@ -1,0 +1,24 @@
+# Run the QuantumFace API and Streamlit dashboard together.
+#   docker compose up --build
+# API        -> http://localhost:8000  (docs at /docs)
+# Dashboard  -> http://localhost:8501
+services:
+  api:
+    build: .
+    image: quantumface:latest
+    command: uvicorn QuantumFace.api.main:app --host 0.0.0.0 --port 8000
+    ports:
+      - "8000:8000"
+    environment:
+      # Force the offline embedder so the container needs no weight download.
+      QF_FORCE_OFFLINE_EMBEDDER: "1"
+
+  dashboard:
+    image: quantumface:latest
+    depends_on:
+      - api
+    command: streamlit run QuantumFace/frontend/dashboard.py --server.port 8501 --server.address 0.0.0.0
+    ports:
+      - "8501:8501"
+    environment:
+      QF_FORCE_OFFLINE_EMBEDDER: "1"

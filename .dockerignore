@@ -1,0 +1,15 @@
+# Keep the build context small and reproducible.
+**/__pycache__/
+**/*.py[cod]
+**/.pytest_cache/
+.venv/
+venv/
+env/
+.git/
+.github/
+**/.DS_Store
+results/_bench_cache/
+results/_long_cache/
+QuantumFace/database/*.db
+QuantumFace/security/keys/*.bin
+QuantumFace/dataset/lfw_home/

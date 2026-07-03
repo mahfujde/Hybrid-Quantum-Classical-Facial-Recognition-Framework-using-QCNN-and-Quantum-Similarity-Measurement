@@ -1,0 +1,98 @@
+[
+  {
+    "dataset": "orl",
+    "n_subjects": 4,
+    "embedding_source": "eigenface",
+    "embedder_name": "eigenface-pca-pixels",
+    "embed_dim": 27,
+    "classifier": "knn",
+    "accuracy": 0.8333333333333334,
+    "precision": 0.8541666666666666,
+    "recall": 0.8333333333333333,
+    "f1": 0.830952380952381,
+    "confusion_matrix": [
+      [
+        2,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        2,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        3,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        3
+      ]
+    ],
+    "train_time_s": 0.00030499999957100954,
+    "infer_latency_s": 0.0001482326667125259,
+    "n_train": 28,
+    "n_test": 12,
+    "verif_same_mean": 0.06898069381713867,
+    "verif_diff_mean": -0.043139632791280746,
+    "verif_best_threshold": 0.17572634543605792,
+    "verif_best_accuracy": 0.7987179487179488,
+    "verif_auc": 0.6259398148148149,
+    "n_pairs": 780
+  },
+  {
+    "dataset": "yale",
+    "n_subjects": 4,
+    "embedding_source": "eigenface",
+    "embedder_name": "eigenface-pca-pixels",
+    "embed_dim": 30,
+    "classifier": "knn",
+    "accuracy": 0.21428571428571427,
+    "precision": 0.3,
+    "recall": 0.20833333333333331,
+    "f1": 0.19642857142857142,
+    "confusion_matrix": [
+      [
+        0,
+        0,
+        0,
+        4
+      ],
+      [
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        3
+      ],
+      [
+        2,
+        0,
+        0,
+        2
+      ]
+    ],
+    "train_time_s": 0.00026449999950273195,
+    "infer_latency_s": 7.633928576719231e-05,
+    "n_train": 31,
+    "n_test": 14,
+    "verif_same_mean": 0.006480345036834478,
+    "verif_diff_mean": -0.025637704879045486,
+    "verif_best_threshold": 1.0000001192092896,
+    "verif_best_accuracy": 0.7676767676767677,
+    "verif_auc": 0.5189557916830644,
+    "n_pairs": 990
+  }
+]

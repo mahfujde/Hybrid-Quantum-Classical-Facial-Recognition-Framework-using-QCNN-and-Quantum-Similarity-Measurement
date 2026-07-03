@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Secrets / keys (regenerated locally; never commit the decapsulation key)
+QuantumFace/security/keys/*.bin
+
+# Local caches / intermediate benchmark artifacts (regenerable)
+results/_bench_cache/
+results/_long_cache/
+QuantumFace/dataset/lfw_home/
+
+# Local DB
+QuantumFace/database/*.db
+
+# excluded from the published repo (kept locally)
+PROGRESS_MEMORY.md
+QuantumFace_Master_Prompt.md
